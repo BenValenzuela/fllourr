@@ -1,0 +1,11 @@
+body{     
+    background-color: rgb(255, 255, 255);       
+    #logo{         color: rgb(0, 0, 0);         
+    text-align: center;         
+    line-height: 0;         
+    margin: -40px;     
+    }           
+}
+.h5{
+    color: black;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="hoodies.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fllourr.cl</title>
+    <link rel="icon" type="image/jpg" href="imagenes/Fllourr_logo_negor.jpg">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .navbar-custom .nav-link {
+            color: black;
+            line-height: 8;
+        }
+
+        /* Estilos personalizados para el botón BUY */
+        .btn-buy {
+            background-color: #000000; /* Café */
+            border-color: #000000; /* Café */
+            color: white; /* Letras blancas */
+        }
+
+        /* Estilos para el botón BUY cuando se pasa el mouse sobre él */
+        .btn-buy:hover {
+            background-color: #FFFFFF; /* Fondo blanco */
+            border-color: #000000; /* Café */
+            color: #000000; /* Letras café */
+        }
+
+        /* Estilos para controlar el tamaño de las imágenes en las tarjetas de los hoodies */
+        .card-img-hoodie {
+            height: 300px; /* Tamaño deseado */
+            object-fit: cover; /* Para asegurar que la imagen cubra todo el espacio */
+        }
+
+        /* Estilos para el selector de tallas */
+        .talla-selector {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="logo" class="text-center">
+    <a href="index.html">
+        <img src="imagenes/Fllourr_logo_blanco.jpg" alt="logo" width="250px">
+    </a>
+</div>
+
+<ul class="nav justify-content-center navbar-custom"> <!-- Añade la clase navbar-custom para aplicar estilos personalizados -->
+<li class="nav-item">
+<a class="nav-link active" aria-current="page" href="T-Shirts.html">T-Shirt</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="Hoodies.html">Hoodies</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="Pants.html">Pants</a>
+</li>
+</ul>
+
+<div class="container">
+    <div class="row justify-content-center">
+    <div class="col-md-4">
+    <div class="card mb-4 mx-auto">
+    <img src="imagenes/Hoodie1_black.jpg" class="card-img-hoodie" alt="...">
+    <div class="card-body text-center">
+        <h5 class="card-title">Hoodie Black</h5>
+        <p class="card-text"></p>
+        <a href="#" class="btn btn-primary btn-buy">COMPRAR</a>
+        <div class="talla-selector">
+            <label for="talla_hoodie_black">Talla:</label>
+            <select id="talla_hoodie_black">
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+            </select>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card mb-4 mx-auto">
+    <img src="imagenes/hoodie_cafe.jpg" class="card-img-hoodie" alt="...">
+    <div class="card-body text-center">
+        <h5 class="card-title">Hoodie Brown</h5>
+        <p class="card-text"></p>
+        <a href="#" class="btn btn-primary btn-buy">COMPRAR</a>
+        <div class="talla-selector">
+            <label for="talla_hoodie_brown">Talla:</label>
+            <select id="talla_hoodie_brown">
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+            </select>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card mb-4 mx-auto">
+    <img src="imagenes/Zip1_black.jpg" class="card-img-hoodie" alt="...">
+    <div class="card-body text-center">
+        <h5 class="card-title">Zip Boxy Black</h5>
+        <p class="card-text"></p>
+        <a href="#" class="btn btn-primary btn-buy">COMPRAR</a>
+        <div class="talla-selector">
+            <label for="talla_zip_boxy_black">Talla:</label>
+            <select id="talla_zip_boxy_black">
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+            </select>
+        </div>
+    </div>
+    </div>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
+

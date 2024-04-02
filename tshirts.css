@@ -1,0 +1,29 @@
+body{     
+    background-color: rgb(255, 255, 255);       
+    #logo{         color: rgb(0, 0, 0);         
+    text-align: center;         
+    line-height: 0;         
+    margin: -40px;     
+    }           
+}
+.h5{
+    color: black;
+}
+.modal-body {
+    display: flex;
+    flex-direction: column; /* Apila las imágenes verticalmente /
+    align-items: center; / Centra las imágenes horizontalmente /
+  }
+  .modal-body img {
+    max-width: 90%; / Reducir el tamaño máximo de las imágenes /
+    height: auto;
+    margin-bottom: 10px; / Espacio entre las imágenes /
+  }
+
+  #desc1 {
+    width: 50%; / Ajusta el ancho del elemento al 50% del contenedor /
+    float: left; / Hace que el elemento flote a la izquierda /
+    margin-right: 10px; / Agrega un pequeño margen derecho para separar del resto del contenido */
+    width: 100%;
+    font-family: "Courier New", Courier, monospace;
+  }
