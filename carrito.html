@@ -1,0 +1,49 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">Abrir Carrito</button>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="cartOffcanvasLabel">Carrito de Compras</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul id="cart-items">
+        <!-- Aquí se agregarán los elementos del carrito de manera dinámica -->
+        </ul>
+        <button class="btn btn-success" onclick="checkout()">Pagar</button>
+    </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <script>
+    // Función para agregar elementos al carrito
+    function addToCart(itemName, price) {
+        var cartItems = document.getElementById('cart-items');
+        var listItem = document.createElement('li');
+        listItem.textContent = itemName + ' - $' + price;
+        cartItems.appendChild(listItem);
+    }
+
+    // Función para proceder al pago
+    function checkout() {
+        // Aquí puedes agregar la lógica para procesar el pago
+        alert('Procesando pago...');
+    }
+    </script>
+
+    </body>
+    </html>
+

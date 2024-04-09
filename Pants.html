@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="Pants.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fllourr.cl</title>
+<link rel="icon" type="image/jpg" href="imagenes/Fllourr_logo_negor.jpg">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<style>
+    .navbar-custom .nav-link {
+        color: black;
+        line-height: 8;
+    }
+
+    /* Estilos personalizados para el botón BUY */
+    .btn-buy {
+        background-color: #000000; /* Café */
+        border-color: #000000; /* Café */
+        color: white; /* Letras blancas */
+    }
+
+    /* Estilos para el botón BUY cuando se pasa el mouse sobre él */
+    .btn-buy:hover {
+        background-color: #FFFFFF; /* Fondo blanco */
+        border-color: #000000; /* Café */
+        color: #000000; /* Letras café */
+    }
+
+    /* Estilos para controlar el tamaño de las imágenes en las tarjetas */
+    .card-img-top {
+        height: 300px; /* Tamaño deseado */
+        object-fit: cover; /* Para asegurar que la imagen cubra todo el espacio */
+    }
+
+    /* Estilos para el selector de tallas */
+    .talla-selector {
+        margin-top: 10px;
+    }
+
+    /* Estilos para la modal */
+    .modal {
+        display: none; /* Por defecto oculta la modal */
+        position: fixed; /* Permite la superposición */
+        z-index: 1; /* Ubica la modal en la parte superior */
+        left: 0;
+        top: 0;
+        width: 100%; /* Cubre toda la pantalla */
+        height: 100%; /* Cubre toda la pantalla */
+        overflow: auto; /* Para permitir el desplazamiento si el contenido es demasiado grande */
+        background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
+        padding-top: 60px; /* Ubica el contenido de la modal hacia abajo */
+    }
+
+    /* Estilos para el contenido de la modal */
+    .modal-content {
+        background-color: #fefefe; /* Fondo blanco */
+        margin: 5% auto; /* Margen del 5% arriba y abajo y centrado horizontalmente */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Ancho del 80% */
+    }
+
+    /* Estilos para el botón de cierre de la modal */
+    .close {
+        color: #aaaaaa; /* Color del botón de cierre */
+        float: right; /* Ubica el botón a la derecha */
+        font-size: 28px; /* Tamaño de la fuente */
+        font-weight: bold; /* Fuente en negrita */
+    }
+
+    /* Estilos para el botón de cierre de la modal cuando se pasa el mouse sobre él */
+    .close:hover,
+    .close:focus {
+        color: #000; /* Cambia el color al pasar el mouse */
+        text-decoration: none; /* Elimina el subrayado */
+        cursor: pointer; /* Cambia el cursor a un puntero */
+    }
+</style>
+</head>
+<body>
+
+<div id="logo" class="text-center">
+<a href="index.html">
+    <img src="imagenes/Fllourr_logo_blanco.jpg" alt="logo" width="250px">
+</a>
+</div>
+
+<ul class="nav justify-content-center navbar-custom"> <!-- Añade la clase navbar-custom para aplicar estilos personalizados -->
+<li class="nav-item">
+<a class="nav-link active" aria-current="page" href="T-Shirts.html">T-Shirt</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="Hoodies.html">Hoodies</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="Pants.html">Pants</a>
+</li>
+</ul>
+
+
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-4">
+    <div class="card mb-4 mx-auto" onclick="openModal('modal_jorts_blue')">
+    <img src="imagenes/Jorts_blue.jpg" class="card-img-top" alt="...">
+    <div class="card-body text-center">
+        <h5 class="card-title">Jorts Blue</h5>
+        <p class="card-text">$34.990</p>
+        <a href="#" class="btn btn-primary btn-buy">COMPRAR</a>
+        <div class="talla-selector">
+        <label for="talla_jorts_blue">Talla:</label>
+        <select id="talla_jorts_blue">
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+        </select>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card mb-4 mx-auto" onclick="openModal('modal_jorts_black')">
+    <img src="imagenes/Jorts_black.jpg" class="card-img-top" alt="...">
+    <div class="card-body text-center">
+        <h5 class="card-title">Jorts Black</h5>
+        <p class="card-text">$34.990</p>
+        <a href="#" class="btn btn-primary btn-buy">COMPRAR</a>
+        <div class="talla-selector">
+        <label for="talla_jorts_black">Talla:</label>
+        <select id="talla_jorts_black">
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+        </select>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card mb-4 mx-auto" onclick="openModal('modal_pants_black')">
+    <img src="imagenes/Pants_black.jpg" class="card-img-top" alt="...">
+    <div class="card-body text-center">
+        <h5 class="card-title">Pants Black</h5>
+        <p class="card-text">$34.990</p>
+        <a href="#" class="btn btn-primary btn-buy">COMPRAR</a>
+        <div class="talla-selector">
+        <label for="talla_pants_black">Talla:</label>
+        <select id="talla_pants_black">
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+        </select>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- Agrega más cartas de pants aquí -->
+</div>
+</div>
+
+<!-- Modal para Jorts Blue -->
+<div id="modal_jorts_blue" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('modal_jorts_blue')">&times;</span>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil voluptas assumenda quia molestiae eaque eos ea soluta animi incidunt reprehenderit eligendi quasi at, asperiores error? Itaque mollitia distinctio quam praesentium.</p>
+</div>
+</div>
+
+<!-- Modal para Jorts Black -->
+<div id="modal_jorts_black" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('modal_jorts_black')">&times;</span>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro dolore cumque dicta magni at nemo. Quas molestiae quaerat vero quos fugiat! At minus ipsa aliquam. Similique quas dolor nesciunt consequuntur?</p>
+</div>
+</div>
+
+<!-- Modal para Pants Black -->
+<div id="modal_pants_black" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('modal_pants_black')">&times;</span>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, nisi. Molestias, voluptatibus tempore accusantium inventore est eum quibusdam qui ex quisquam necessitatibus, omnis corporis error eligendi adipisci, distinctio consequuntur earum.</p>
+</div>
+</div>
+
+<!-- Agrega más modales aquí -->
+
+<script>
+function openModal(modalId) {
+var modal = document.getElementById(modalId);
+modal.style.display = "block";
+}
+
+function closeModal(modalId) {
+var modal = document.getElementById(modalId);
+modal.style.display = "none";
+}
+</script>
+
+</body>
+</html>
+

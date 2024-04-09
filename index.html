@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,9 +47,9 @@
 
     <header>
         <a class="btn btn-light" href="index.html">Inicio</a>
-        <a class="btn btn-light" href="aboutus.html">About us</a>
-        <a class="btn btn-light" href="#">Perfil</a>
-        <a class="btn btn-light" href="#">Carrito</a>
+        <a class="btn btn-light" href="ayuda.html">Ayuda</a>
+        <a class="btn btn-light" href="perfil.html">Perfil</a>
+        <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">Carrito</button>
     </header>
 
     <ul class="nav justify-content-center navbar-custom">
@@ -108,11 +108,20 @@
             </div>
         </div>
     </footer>
-    
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-</body>
-</html>
-``
 
-        
+<!-- Offcanvas para el carrito de compras -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="cartOffcanvasLabel">Carrito de Compras</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+    <ul id="cart-items">
+        <!-- Aquí se agregarán los elementos del carrito de manera dinámica -->
+    </ul>
+    <button class="btn btn-success" onclick="checkout()">Pagar</button>
+    </div>
+</div>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudf

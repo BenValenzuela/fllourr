@@ -37,45 +37,6 @@
         .talla-selector {
             margin-top: 10px;
         }
-
-        /* Estilos para la modal */
-        .modal {
-            display: none; /* Por defecto oculta la modal */
-            position: fixed; /* Permite la superposición */
-            z-index: 1; /* Ubica la modal en la parte superior */
-            left: 0;
-            top: 0;
-            width: 100%; /* Cubre toda la pantalla */
-            height: 100%; /* Cubre toda la pantalla */
-            overflow: auto; /* Para permitir el desplazamiento si el contenido es demasiado grande */
-            background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
-            padding-top: 60px; /* Ubica el contenido de la modal hacia abajo */
-        }
-
-        /* Estilos para el contenido de la modal */
-        .modal-content {
-            background-color: #fefefe; /* Fondo blanco */
-            margin: 5% auto; /* Margen del 5% arriba y abajo y centrado horizontalmente */
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%; /* Ancho del 80% */
-        }
-
-        /* Estilos para el botón de cierre de la modal */
-        .close {
-            color: #aaaaaa; /* Color del botón de cierre */
-            float: right; /* Ubica el botón a la derecha */
-            font-size: 28px; /* Tamaño de la fuente */
-            font-weight: bold; /* Fuente en negrita */
-        }
-
-        /* Estilos para el botón de cierre de la modal cuando se pasa el mouse sobre él */
-        .close:hover,
-        .close:focus {
-            color: #000; /* Cambia el color al pasar el mouse */
-            text-decoration: none; /* Elimina el subrayado */
-            cursor: pointer; /* Cambia el cursor a un puntero */
-        }
     </style>
 </head>
 <body>
@@ -102,11 +63,11 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-4">
-      <div class="card mb-4 mx-auto" onclick="openModal('modal_mariah')">
+      <div class="card mb-4 mx-auto">
         <img src="imagenes/Blanca_autos.jpg" class="card-img-top" alt="...">
         <div class="card-body text-center">
           <h5 class="card-title">MARIAH</h5>
-          <p class="card-text">$16.990</p>
+          <p class="card-text"></p>
           <a href="#" class="btn btn-primary btn-buy">COMPRAR</a>
           <div class="talla-selector">
             <label for="talla_mariah">Talla:</label>
@@ -121,11 +82,11 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card mb-4 mx-auto" onclick="openModal('modal_les_yeux')">
+      <div class="card mb-4 mx-auto">
         <img src="imagenes/negraLA.jpg" class="card-img-top" alt="...">
         <div class="card-body text-center">
           <h5 class="card-title">LES YEUX</h5>
-          <p class="card-text">$16.990</p>
+          <p class="card-text"></p>
           <a href="#" class="btn btn-primary btn-buy">COMPRAR</a>
           <div class="talla-selector">
             <label for="talla_les_yeux">Talla:</label>
@@ -140,11 +101,11 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card mb-4 mx-auto" onclick="openModal('modal_visage')">
+      <div class="card mb-4 mx-auto">
         <img src="imagenes/tank_flores.jpg" class="card-img-top" alt="...">
         <div class="card-body text-center">
           <h5 class="card-title">VISAGE</h5>
-          <p class="card-text">$16.990</p>
+          <p class="card-text"></p>
           <a href="#" class="btn btn-primary btn-buy">COMPRAR</a>
           <div class="talla-selector">
             <label for="talla_visage">Talla:</label>
@@ -158,49 +119,8 @@
         </div>
       </div>
     </div>
-    <!-- Agrega más cartas de poleras aquí -->
   </div>
 </div>
-
-<!-- Modal para Mariah -->
-<div id="modal_mariah" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal_mariah')">&times;</span>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi animi distinctio a ipsa, fugiat assumenda saepe eius. Odit architecto, mollitia maxime, voluptas porro nulla non necessitatibus hic laboriosam quod cumque!</p>
-  </div>
-</div>
-
-<!-- Modal para Les Yeux -->
-<div id="modal_les_yeux" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal_les_yeux')">&times;</span>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam eligendi ad neque error accusantium ut corporis, a rem accusamus molestiae, ratione dolores ipsam nisi beatae, architecto cum esse vel debitis!</p>
-  </div>
-</div>
-
-<!-- Modal para Visage -->
-<div id="modal_visage" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal_visage')">&times;</span>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda harum excepturi laboriosam aut sed molestias error neque aliquam odit tenetur? Adipisci voluptatem quae iusto, libero ea excepturi facere labore corporis.</p>
-  </div>
-</div>
-
-<!-- Agrega más modales aquí -->
-
-<script>
-function openModal(modalId) {
-  var modal = document.getElementById(modalId);
-  modal.style.display = "block";
-}
-
-function closeModal(modalId) {
-  var modal = document.getElementById(modalId);
-  modal.style.display = "none";
-}
-</script>
 
 </body>
 </html>
-
-

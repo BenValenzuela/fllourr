@@ -1,50 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="hoodies.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fllourr.cl</title>
-    <link rel="icon" type="image/jpg" href="imagenes/Fllourr_logo_negor.jpg">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <style>
-        .navbar-custom .nav-link {
-            color: black;
-            line-height: 8;
-        }
+<link rel="stylesheet" href="Pants.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fllourr.cl</title>
+<link rel="icon" type="image/jpg" href="imagenes/Fllourr_logo_negor.jpg">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<style>
+    .navbar-custom .nav-link {
+        color: black;
+        line-height: 8;
+    }
 
-        /* Estilos personalizados para el botón BUY */
-        .btn-buy {
-            background-color: #000000; /* Café */
-            border-color: #000000; /* Café */
-            color: white; /* Letras blancas */
-        }
+    /* Estilos personalizados para el botón BUY */
+    .btn-buy {
+        background-color: #000000; /* Café */
+        border-color: #000000; /* Café */
+        color: white; /* Letras blancas */
+    }
 
-        /* Estilos para el botón BUY cuando se pasa el mouse sobre él */
-        .btn-buy:hover {
-            background-color: #FFFFFF; /* Fondo blanco */
-            border-color: #000000; /* Café */
-            color: #000000; /* Letras café */
-        }
+    /* Estilos para el botón BUY cuando se pasa el mouse sobre él */
+    .btn-buy:hover {
+        background-color: #FFFFFF; /* Fondo blanco */
+        border-color: #000000; /* Café */
+        color: #000000; /* Letras café */
+    }
 
-        /* Estilos para controlar el tamaño de las imágenes en las tarjetas de los hoodies */
-        .card-img-hoodie {
-            height: 300px; /* Tamaño deseado */
-            object-fit: cover; /* Para asegurar que la imagen cubra todo el espacio */
-        }
+    /* Estilos para controlar el tamaño de las imágenes en las tarjetas */
+    .card-img-top {
+        height: 300px; /* Tamaño deseado */
+        object-fit: cover; /* Para asegurar que la imagen cubra todo el espacio */
+    }
 
-        /* Estilos para el selector de tallas */
-        .talla-selector {
-            margin-top: 10px;
-        }
-    </style>
+    /* Estilos para el selector de tallas */
+    .talla-selector {
+        margin-top: 10px;
+    }
+
+    /* Estilos para la modal */
+    .modal {
+        display: none; /* Por defecto oculta la modal */
+        position: fixed; /* Permite la superposición */
+        z-index: 1; /* Ubica la modal en la parte superior */
+        left: 0;
+        top: 0;
+        width: 100%; /* Cubre toda la pantalla */
+        height: 100%; /* Cubre toda la pantalla */
+        overflow: auto; /* Para permitir el desplazamiento si el contenido es demasiado grande */
+        background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
+        padding-top: 60px; /* Ubica el contenido de la modal hacia abajo */
+    }
+
+    /* Estilos para el contenido de la modal */
+    .modal-content {
+        background-color: #fefefe; /* Fondo blanco */
+        margin: 5% auto; /* Margen del 5% arriba y abajo y centrado horizontalmente */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Ancho del 80% */
+    }
+
+    /* Estilos para el botón de cierre de la modal */
+    .close {
+        color: #aaaaaa; /* Color del botón de cierre */
+        float: right; /* Ubica el botón a la derecha */
+        font-size: 28px; /* Tamaño de la fuente */
+        font-weight: bold; /* Fuente en negrita */
+    }
+
+    /* Estilos para el botón de cierre de la modal cuando se pasa el mouse sobre él */
+    .close:hover,
+    .close:focus {
+        color: #000; /* Cambia el color al pasar el mouse */
+        text-decoration: none; /* Elimina el subrayado */
+        cursor: pointer; /* Cambia el cursor a un puntero */
+    }
+</style>
 </head>
 <body>
 
 <div id="logo" class="text-center">
-    <a href="index.html">
-        <img src="imagenes/Fllourr_logo_blanco.jpg" alt="logo" width="250px">
-    </a>
+<a href="index.html">
+    <img src="imagenes/Fllourr_logo_blanco.jpg" alt="logo" width="250px">
+</a>
 </div>
 
 <ul class="nav justify-content-center navbar-custom"> <!-- Añade la clase navbar-custom para aplicar estilos personalizados -->
@@ -59,68 +98,107 @@
 </li>
 </ul>
 
+
 <div class="container">
-    <div class="row justify-content-center">
-    <div class="col-md-4">
-    <div class="card mb-4 mx-auto">
-    <img src="imagenes/Hoodie1_black.jpg" class="card-img-hoodie" alt="...">
+<div class="row justify-content-center">
+<div class="col-md-4">
+    <div class="card mb-4 mx-auto" onclick="openModal('modal_black_hoodie')">
+    <img src="imagenes/Hoodie1_black.jpg" class="card-img-top" alt="...">
     <div class="card-body text-center">
         <h5 class="card-title">Hoodie Black</h5>
-        <p class="card-text"></p>
+        <p class="card-text">$34.990</p>
         <a href="#" class="btn btn-primary btn-buy">COMPRAR</a>
         <div class="talla-selector">
-            <label for="talla_hoodie_black">Talla:</label>
-            <select id="talla_hoodie_black">
-                <option value="s">S</option>
-                <option value="m">M</option>
-                <option value="l">L</option>
-                <option value="xl">XL</option>
-            </select>
+        <label for="talla_black_hoodie">Talla:</label>
+        <select id="talla_black_hoodie">
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+        </select>
         </div>
     </div>
     </div>
 </div>
 <div class="col-md-4">
-    <div class="card mb-4 mx-auto">
-    <img src="imagenes/hoodie_cafe.jpg" class="card-img-hoodie" alt="...">
+    <div class="card mb-4 mx-auto" onclick="openModal('modal_brown_hoodie')">
+    <img src="imagenes/hoodie_cafe.jpg" class="card-img-top" alt="...">
     <div class="card-body text-center">
         <h5 class="card-title">Hoodie Brown</h5>
-        <p class="card-text"></p>
+        <p class="card-text">$34.990</p>
         <a href="#" class="btn btn-primary btn-buy">COMPRAR</a>
         <div class="talla-selector">
-            <label for="talla_hoodie_brown">Talla:</label>
-            <select id="talla_hoodie_brown">
-                <option value="s">S</option>
-                <option value="m">M</option>
-                <option value="l">L</option>
-                <option value="xl">XL</option>
-            </select>
+        <label for="talla_brown_hoodie">Talla:</label>
+        <select id="talla_brown_hoodie">
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+        </select>
         </div>
     </div>
     </div>
 </div>
 <div class="col-md-4">
-    <div class="card mb-4 mx-auto">
-    <img src="imagenes/Zip1_black.jpg" class="card-img-hoodie" alt="...">
+    <div class="card mb-4 mx-auto" onclick="openModal('modal_black_boxy_hoodie')">
+    <img src="imagenes/Zip1_black.jpg" class="card-img-top" alt="...">
     <div class="card-body text-center">
         <h5 class="card-title">Zip Boxy Black</h5>
-        <p class="card-text"></p>
+        <p class="card-text">$34.990</p>
         <a href="#" class="btn btn-primary btn-buy">COMPRAR</a>
         <div class="talla-selector">
-            <label for="talla_zip_boxy_black">Talla:</label>
-            <select id="talla_zip_boxy_black">
-                <option value="s">S</option>
-                <option value="m">M</option>
-                <option value="l">L</option>
-                <option value="xl">XL</option>
-            </select>
+        <label for="talla_black_boxy_hoodie">Talla:</label>
+        <select id="talla_black_boxy_hoodie">
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+        </select>
         </div>
     </div>
     </div>
 </div>
+<!-- Agrega más cartas de hoodies aquí -->
+</div>
+</div>
 
+<!-- Modal para Hoodie Black -->
+<div id="modal_black_hoodie" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('modal_black_hoodie')">&times;</span>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nihil id possimus provident. Esse magni odio officia, unde eos nihil, consectetur quia eligendi saepe mollitia veritatis eum pariatur molestias error.</p>
 </div>
 </div>
+
+<!-- Modal para Hoodie Brown -->
+<div id="modal_brown_hoodie" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('modal_brown_hoodie')">&times;</span>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt incidunt ratione adipisci in autem dolor corporis facere minima doloribus quisquam! Consequatur impedit possimus repellat eos rerum, aliquid deserunt neque laudantium./p>
+</div>
+</div>
+
+<!-- Modal para Zip Boxy Black -->
+<div id="modal_black_boxy_hoodie" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal('modal_black_boxy_hoodie')">&times;</span>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolores ipsa asperiores iusto repellendus ad deserunt corporis ullam illum quos numquam porro nam, quaerat quae incidunt ab consectetur impedit hic!</p>
+</div>
+</div>
+
+<!-- Agrega más modales aquí -->
+
+<script>
+function openModal(modalId) {
+var modal = document.getElementById(modalId);
+modal.style.display = "block";
+}
+
+function closeModal(modalId) {
+var modal = document.getElementById(modalId);
+modal.style.display = "none";
+}
+</script>
 
 </body>
 </html>
